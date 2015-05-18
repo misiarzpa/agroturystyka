@@ -1,0 +1,36 @@
+ <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; pam</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="http://wierzba.wzks.uj.edu.pl/~12_misiarz/silex/web/fx/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="http://wierzba.wzks.uj.edu.pl/~12_misiarz/silex/web/fx/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://wierzba.wzks.uj.edu.pl/~12_misiarz/silex/web/fx/js/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+<script>
+function initialize() {
+  var mapProp = {
+    center:new google.maps.LatLng(49.5483566, 19.015040099999965),
+    zoom:15,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+  var marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(49.5483566, 19.015040099999965)});
+  var infowindow = new google.maps.InfoWindow({content:"<b>Agroturystyka Laliki</b><br/>133<br/>34-373 Laliki" });
+
+}
+//google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="http://wierzba.wzks.uj.edu.pl/~12_misiarz/silex/web/fx/js/grayscale.js"></script>
