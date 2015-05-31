@@ -5,7 +5,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
+                <a class="navbar-brand page-scroll" href="static_pages">
                     <i class="glyphicon-heart"></i> <span class="light">Agroturystyka w Lalikach</span> 
                 </a>
             </div>
@@ -14,23 +14,39 @@
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#1">O nas</a>
+                    <li> <% if current_page?(static_pages_path) %>
+                         <a class="page-scroll" href="#1">O nas</a>
+                         <% else %>
+                         <a class="page-scroll" href="static_pages#1">O nas</a>
+                         <% end %>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#2">Atrakcje</a>
+                    <li><% if current_page?(static_pages_path) %>
+                         <a class="page-scroll" href="#2">Atrakcje</a>
+                         <% else %>
+                         <a class="page-scroll" href="static_pages#2">Atrakcje</a>
+                         <% end %>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#3">Pokoje</a>
+                    <li><% if current_page?(static_pages_path) %>
+                         <a class="page-scroll" href="#3">Pokoje</a>
+                         <% else %>
+                         <a class="page-scroll" href="static_pages#3">Pokoje</a>
+                         <% end %>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#4">Kontakt</a>
+                    <li><% if current_page?(static_pages_path) %>
+                         <a class="page-scroll" href="#4">Kontakt</a>
+                         <% else %>
+                         <a class="page-scroll" href="static_pages#4">Kontakt</a>
+                         <% end %>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#5">O stronie</a>
+                    <li><% if current_page?(static_pages_path) %>
+                         <a class="page-scroll" href="#5">O stronie</a>
+                         <% else %>
+                         <a class="page-scroll" href="static_pages#5">O stronie</a>
+                         <% end %>
                     </li>
                 </ul>
             </div>
@@ -42,15 +58,65 @@
     <!-- Intro Header -->
     <header class="intro">
         <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">						
-                        <div class ="paulinka">
-                                <h1 class="brand-heading">Agroturystyka w Lalikach</h1>
-                                <p class="intro-text">Jesteś u siebie<br></p>                              
-                        </div>   						
-                    </div>
-                </div>
-            </div>
+          
+                
+           
+                              
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="http://wierzba.wzks.uj.edu.pl/~12_misiarz/Projekt_Licencjacki/fx/img/1.jpg" alt="Chania" width="100%">
+      <div class="carousel-caption">
+        <h3>Chania</h3>
+        <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="http://wierzba.wzks.uj.edu.pl/~12_misiarz/Projekt_Licencjacki/fx/img/2.jpg" alt="Chania" width="100%">
+      <div class="carousel-caption">
+        <h3>Chania</h3>
+        <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="http://wierzba.wzks.uj.edu.pl/~12_misiarz/Projekt_Licencjacki/fx/img/3.jpg" alt="Flower" width="100%">
+      <div class="carousel-caption">
+        <h3>Flowers</h3>
+        <p>Beatiful flowers in Kolymbari, Crete.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="img_flower2.jpg" alt="Flower">
+      <div class="carousel-caption">
+        <h3>Flowers</h3>
+        <p>Beatiful flowers in Kolymbari, Crete.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>                             
+                       
+           
         </div>
     </header>
