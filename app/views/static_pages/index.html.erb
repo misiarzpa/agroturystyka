@@ -1,84 +1,81 @@
 <!-- About Section -->
+
     <section id="1" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Kim jesteśmy?</h2>
-                <h4>podtytuł</h4>
-                <p> Opis działalności                   
+                <p> Nasze gospodarstwo agroturystyczne położone jest w górskiej miejscowości Laliki w województwie Śląskim. Prowadzimy je my - Jasiu i Benia Misiarz od dwóch lat. Był dla nas wspaniały czas dzielenia się z przyjezdnymi tym, co dla nas najcenniejsze - domem, ogrodem, krajobrazami, naszą lokalną kulturą i kuchnią. Dbanie o nasze gospodarstwo i jego mieszkańców to nasza pasja. </p><p>W dobie ciągłego biegu i szybkiego życia jest dla nas radością niesienie ukojenia i odpoczynku dla naszych gości. Zapraszamy!</p>                  
                 </p>
-                <p>   
-                    Jeśli chcesz wiedzieć więcej - przejdź do galerii.
-                </p>
+                <h4>   
+                    <%= link_to 'Poznaj nas bliżej >', abouts_path %> 
+                </h4>
             </div>
         </div>
     </section>
 
     <!-- Attractions Section -->
-    <section id="2" class="container content-section text-center">
-        <div class="row">
+    <section id="2" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Atrakcje</h2>
-                <h4>Podtytuł</h4>
-                <p>Opis atrakcji 
+                <p>Laliki otoczone są górami, co zapewnia nie tylko niesamowite widoki, ale również mnóstwo atrakcji o każdej porze roku. <p>W zimie zachęcamy do korzystania ze stoków narciarskich, organizowanych przez nas kuligów i ognisk z domowym grzanym winem. Wiosna to nowa energia na piesze i rowerowe wycieczki w góry Beskidu Żywieckiego i Śląskiego a także początek sezonu grillowego na łonie natury! Lato to z kolei czas leżakowania i odpoczynku, zapraszamy więc nad okoliczną rzekę Sołę i do naszego ogrodu pełnego drzew rodzących najsmaczniejsze owoce.Na jesień proponujemy grzybobrania, wykopki, uczestnictwo w produkcji lub konsumpcji wina i wszelkich przetworów domowej roboty. </p><p>Cały okrągły rok gwarantujemy Wam spokój, czyste powietrze, piękne widoki, pyszne, domowe jedzenie, wraz z przysmakami kuchni lokalnej, uczestnictwo w życiu gospodarstwa i lokalnej społczności, poznanie kultury ziemi Żywieckiej, wszelkie rodzaje biesiad i różne formy wypoczynku czynnego. Jesteśmy kameralnym ośrodkiem agroturystycznym, w którym poczujecie się jak u siebie!
+
                 </p>
-                <p>
-                    Opis okolicznych atrakcji
-                    <%= link_to 'Przejdź do galerii', attractions_path %>
-                </p>
+                <h4>
+                    <%= link_to 'Zobacz co na Ciebie czeka >', attractions_path %>
+                </h4>
             </div>
         </div>
+    </div>
     </section>   
                 
                 
                 
                 
     <!-- Rooms Section -->
-    <section id="3" class="content-section text-center">
-        <div class="download-section">
-            <div class="container">
+    <section id="3" class="container content-section text-center">
+            <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">      
                     <h2>Pokoje</h2>
-                    <h4>Podtytuł</h4>
-                    <ul class="ul">
-                    <li>Opis pokoi
-                    </li><br>
+                    <p>Dysponujemy czterema pokojami dla gości: dwa dwuosobowe i dwa czteroosobowe. Każdy z nich wyposażony jest w potrzebne sprzęty i stylizowany na góralską nutę. 
+                    </p><br>
                    
-                    </ul>
-                    <%= link_to 'Zobacz nasze pokoje i sprawdż dostępność', rooms_path %>
+                    <h4>
+                    <%= link_to 'Zobacz nasze pokoje >', rooms_path %></h4>
 
                 </div>
             </div>
-        </div>
     </section>
     <!-- Contact Section -->
-    <section id="4" class="container content-section text-center">
-        <div class="row">
+    <section id="4" class="content-section text-center">
+        <div class="container">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Kontakt</h2>
                 <h4>Jak do nas dojechać?</h4>
             
                 <p> 
-                  Laliki 133
+                  adres: Laliki 133
                 </p> 
-                <p>Telefony i inne</p>  
-                <p>    
-                   Mapka
-                    <div id="googleMap" style="width:100%;height:380px;"></div>
-                </p>
-            </div>
-        </div>
-    </section>
+                <p>telefon: 535011593</p> 
+                <p>email: agro_laliki@gmail.com</p>  
+                <h4 style="color:#fff">  
+                   Mapka</h4>  
+                   </div>  </div></section> <p><div id="googleMap" style="width:100%;height:380px;"></div></p>
+                
+            
+       
+   
    <!-- About_Project Section -->
-    <section id="5" class="content-section text-center">
-        <div class="download-section">
-            <div class="container">
+    <section id="5" class="container content-section text-center">
+            <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">      
                     <h2>O stronie</h2>
                     <h4>Projekt Licencjacki</h4>
                     <p>Ta strona powstała jako integralna część Projektu Licencjackiego...</p>
-                    <p> Źródła                         
-                    </p>               
+                    <h4> Źródła 
+                    https://e-turysta.net/pokoje-goscinne-u-galow-poronin-158055.html                        
+                    </h4>               
                 </div>
             </div>
-        </div>
     </section>

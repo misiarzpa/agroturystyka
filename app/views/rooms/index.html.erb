@@ -1,32 +1,29 @@
-<h1>Listing rooms</h1>
+<section class="container content-section text-center">
 
-<table>
-  <thead>
-    <tr>
-      <th>Avatar</th>
-      <th>Price</th>
-      <th>Number</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<h2> Nasz ośrodek </h2> 
+<p><img src = "http://wierzba.wzks.uj.edu.pl/~12_misiarz/Projekt_Licencjacki/fx/img/home.jpg" alt = "home" width = "100%" height ="600px"></p><br>
 
-  <tbody>
-    <% @rooms.each do |room| %>
-      <tr>
-        <td> <%= image_tag(room.avatar_url, :width => 200) if room.avatar.present? %></td>
-        <td><%= room.price %></td>
-        <td><%= room.number %></td>
-        <td><%= room.description %></td>
-        <td><%= link_to 'Show', room %></td>
-        <td><%= link_to 'Edit', edit_room_path(room) %></td>
-        <td><%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-       <td><%= link_to 'STRONA GŁÓWNA', static_pages_path %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+     <p><div class="row">
+            <% @rooms.each do |room| %>
+
+           <div class="col-lg-6">
+         <%= image_tag(room.avatar_url, :width => 400) if room.avatar.present? %><br>
+        <h2><%= room.picture %></h2>
+          <p>Pokój zmieści <%= room.number %> osoby.</p>
+          <p><%= room.description %></p>
+          <p>Cena pokoju to  <%= room.price %>  PLN</p>
+        
+          <p><%= link_to 'Show', room %></p>
+        <p><%= link_to 'Edit', edit_room_path(room) %></p>
+        <p><%= link_to 'Destroy', room, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+       <p><%= link_to 'STRONA GŁÓWNA', static_pages_path %> 
+        </div><!-- /.col-lg-4 -->
+       
+     <% end %>
+      </div></p><!-- /.row -->
+
 
 <br>
 
 <%= link_to 'New Room', new_room_path %>
+    </section>

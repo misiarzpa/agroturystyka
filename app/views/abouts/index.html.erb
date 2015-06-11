@@ -1,0 +1,28 @@
+<section class="content-section text-center">
+
+      <!-- Three columns of text below the carousel -->
+
+     <div class="row">
+           <% @abouts.each do |about| %>
+
+           <div class="col-lg-6">
+         <%= image_tag(about.avatar_url, :class => "img-circle") if about.avatar.present? %><br>
+        
+          <h2><%= about.name %> <%= about.surname %></h2>
+          <p><%= about.description %></p>
+        
+          <p><%= link_to 'Edit', edit_about_path(about) %></p>
+        <p><%= link_to 'Destroy', about, method: :delete, data: { confirm: 'Are you sure?' } %></p>   
+        </div><!-- /.col-lg-4 -->
+       
+     <% end %>
+      </div><!-- /.row -->
+       
+       
+
+
+
+
+<br>
+<%= link_to 'New About', new_about_path %>
+   </section>
